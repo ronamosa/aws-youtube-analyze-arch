@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Id": "SQSQueuePolicy",
+  "Statement": [
+    {
+      "Sid": "sqsAccessPolicy",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Action": "sqs:SendMessage",
+      "Resource": "arn:aws:sqs:ap-southeast-2:833580871776:VideoQueue.fifo",
+      "Condition": {
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:lambda:ap-southeast-2:833580871776:function:createSqsVideoQueue"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install -r functions/function1/src/requirements.txt
+          pip3 install -r functions/function2/src/requirements.txt
+          # ... install requirements for other functions as needed
+      - name: Build functions
+        run: |
+          # Build function1
+          cd functions/function1/src
+          zip -r function1.zip .
+          cd ../../..
+          # Build function2
+          cd functions/function2/src
+          zip -r function2.zip .
+          cd ../../..
+          # ... build other functions as needed
+      - name: Test functions
+        run: |
+          # Test function1
+          cd functions/function1/test
+          python3 -m unittest
+          cd ../../..
+          # Test function2
+          cd functions/function2/test
+          python3 -m unittest
+          cd ../../..
+          # ... test other functions as needed
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy with AWS CDK
+        run: |
+          # Synthesize the CloudFormation templates
+          cd cdk
+          python3 -m cdk synth
+          # Deploy the stack
+          python3 -m cdk deploy

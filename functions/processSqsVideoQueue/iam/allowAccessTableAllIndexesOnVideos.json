@@ -1,0 +1,24 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Sid": "AccessTableAllIndexesOnVideos",
+          "Effect": "Allow",
+          "Action": [
+              "dynamodb:PutItem",
+              "dynamodb:UpdateItem",
+              "dynamodb:DeleteItem",
+              "dynamodb:BatchWriteItem",
+              "dynamodb:GetItem",
+              "dynamodb:BatchGetItem",
+              "dynamodb:Scan",
+              "dynamodb:Query",
+              "dynamodb:ConditionCheckItem"
+          ],
+          "Resource": [
+              "arn:aws:dynamodb:ap-southeast-2:833580871776:table/Videos",
+              "arn:aws:dynamodb:ap-southeast-2:833580871776:table/Videos/index/*"
+          ]
+      }
+  ]
+}

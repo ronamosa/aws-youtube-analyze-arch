@@ -1,0 +1,9 @@
+{
+  "app": "python3 -m cdk",
+  "context": {
+    "region": "us-east-1",
+    "aws-profile": "my-profile"
+  },
+  "outdir": "cdk.out",
+  "requireApproval": "never"
+}

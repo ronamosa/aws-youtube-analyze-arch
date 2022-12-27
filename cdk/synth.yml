@@ -1,0 +1,5 @@
+stacks:
+  - outdir: cdk.out
+    include:
+      - prod
+      - staging

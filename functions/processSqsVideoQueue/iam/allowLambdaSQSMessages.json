@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Sid": "allowLambdaSqsMessagesVideo",
+          "Effect": "Allow",
+          "Action": [
+              "sqs:ReceiveMessage",
+              "sqs:DeleteMessage",
+              "sqs:GetQueueAttributes"
+          ],
+          "Resource": "arn:aws:sqs:ap-southeast-2:833580871776:VideoQueue.fifo"
+      }
+  ]
+}
