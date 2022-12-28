@@ -17,6 +17,7 @@ A front-end allowing submission of new channels to be analysed would be great, b
 * AWS Account
 * aws-cli
 * CDK cli
+* [https://pypi.org/project/youtube-transcript-api/](https://pypi.org/project/youtube-transcript-api/)
 
 ## Components
 
@@ -30,7 +31,7 @@ Note: `processSqsVideoQueue` is a configured as a Lambda trigger for SQS queue, 
 
 ## TODO
 
-Still plenty left to do, please see the Projects for Backlog of work to complete.
+Still plenty left to do, please see `Projects` for a backlog of work to complete.
 
 ## Setup
 
