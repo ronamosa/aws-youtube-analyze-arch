@@ -28,7 +28,9 @@ A front-end allowing submission of new channels to be analysed would be great, b
 
 Note: `processSqsVideoQueue` is a configured as a Lambda trigger for SQS queue, so that it picks up messages it polls on the Queue and fetches transcripts to store to S3.
 
-TODO: architecture diagram.
+## TODO
+
+Still plenty left to do, please see the Projects for Backlog of work to complete.
 
 ## Setup
 
