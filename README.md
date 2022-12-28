@@ -8,6 +8,10 @@ The intention is full automation, CDK for IaC, CICD for automated testing and de
 
 A front-end allowing submission of new channels to be analysed would be great, but let's be honest, this is a completely useless project whose purpose is to play and learn about these technologies and hopefully make a better architect, developer and engineer out of me.
 
+### Diagram
+
+![diagram](docs/image/diagram.png)
+
 ## Requirements
 
 * AWS Account
