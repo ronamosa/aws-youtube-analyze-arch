@@ -2,7 +2,7 @@
 
 ## Overview
 
-An AWS architecture project to use Lambda, DynamoDB, S3, SQS and Python to create an automated system that takes a channel id, fetches all available video transcripts and then analyses it with Amazon Athena to get a "vibe check" of the videos individually, and then the channel as a whole.
+An AWS architecture project to use Lambda, DynamoDB, S3, SQS and Python to create an automated system that takes a channel id, fetches all available video transcripts and then analyses it with Amazon Transcribe to get a "vibe check" of the videos individually, and then the channel as a whole.
 
 The intention is full automation, CDK for IaC, CICD for automated testing and deployment and a regular schedule of polling youtube channels for new videos and re-analysis of "vibe".
 
